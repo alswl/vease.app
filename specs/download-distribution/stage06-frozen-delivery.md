@@ -173,7 +173,7 @@
 
 Stage06 原始指纹记录是当时的混合候选快照；此后官网 `index.html` 增加隐私说明文案，不改变原 Stage03 下载 / Stage04 GA4 候选身份。当前身份：HEAD `3ca752ae6c7a16f5f9f52b7b5a1a64a94f015469`，分支 `vdev-02-local-downloads`；`index.html` 仍为未提交 WIP。历史冻结 index SHA 为 `ab985faaa7d808243f007264d748cff1c2c3479aed32a4aa60aee178bc11f978`；当前 index 为 297445 bytes，SHA-256 `5769c8c306ac419283a3167bdcfa5d9ef5bd5e123c59970ea44cb45f771835a3`。
 
-历史隐私文案审阅入口曾为 6463 bytes（SHA-256 `0baf3f794b9fdd13cbf0c7c97caa9c6a3bf3b847669113c8aac8875648a32aac`），历史运行记录为 3094 bytes（SHA-256 `8d4c7fa330a2760cce6941775f77fa20eb08e5fbb90b19ca55a97e1fba888125`）；两者均为旧文案版证据。当前负责人反馈后的报告入口为 [privacy-copy-review.html](evidence/privacy-copy-review.html)（3901 bytes，SHA-256 `b0f9b75650843af9c8166c0e40b70989f0131ecc27a7e0498c4825619d7c7b23`），README 链接该报告；旧版详细运行记录不纳入本候选。报告中的本地自验不等于 Captain 所述独立 QA 全量回归，也不表示 App 通过或线上发布。官网 WIP 不改变 Vlogo App 628 源码或包身份。
+历史隐私文案审阅入口曾为 6463 bytes（SHA-256 `0baf3f794b9fdd13cbf0c7c97caa9c6a3bf3b847669113c8aac8875648a32aac`），历史运行记录为 3094 bytes（SHA-256 `8d4c7fa330a2760cce6941775f77fa20eb08e5fbb90b19ca55a97e1fba888125`）；两者均为旧文案版证据。当前负责人反馈后的报告入口为 [privacy-copy-review.html](evidence/privacy-copy-review.html)（3809 bytes，SHA-256 `318f0195d0786fc845a296ea2dbf37ea1efa62c59e45d67b790ae3d4b0478e3c`），README 链接该报告；旧版详细运行记录不纳入本候选。报告中的本地自验不等于 Captain 所述独立 QA 全量回归，也不表示 App 通过或线上发布。官网 WIP 不改变 Vlogo App 628 源码或包身份。
 
 ## Captain 提供的外部交付绑定（官网席未访问或核验目标）
 
