@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vlogo 秒剪 — AI 剪 vlog，你把关</title>
+<meta name="ga4-measurement-id" content="">
 <meta name="description" content="把一个旅行素材目录剪成约一分钟的 vlog：AI 场记、AI 大纲、AI 粗剪，每一步都可以插手。macOS 邀请内测中。">
 <link rel="canonical" href="https://vlogo.0xyz.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -267,6 +268,48 @@
   .final h2 { font-size: clamp(28px, 4.4vw, 44px); font-weight: 700; margin-bottom: 12px; }
   .final p { color: var(--muted); font-size: 16.5px; max-width: 540px; margin: 0 auto 30px; }
   .final .cta-note { display: block; margin-top: 16px; }
+  .release-card {
+    max-width: 680px;
+    margin: 34px auto 0;
+    padding: 24px;
+    text-align: left;
+    background: rgba(255,255,255,.82);
+    border: 1px solid var(--stroke);
+    border-radius: 18px;
+    box-shadow: 0 16px 48px rgba(86,71,222,.08);
+  }
+  .release-card h3 { font-size: 19px; }
+  .release-meta, .release-status { color: var(--muted); font-size: 14px; }
+  .release-meta { margin-top: 4px; }
+  .release-artifacts { display: grid; gap: 12px; margin-top: 20px; }
+  .release-artifact {
+    display: grid;
+    grid-template-columns: minmax(90px, auto) 1fr;
+    align-items: start;
+    gap: 4px 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--stroke);
+  }
+  .release-artifact .btn { grid-row: span 2; justify-self: start; padding: 8px 18px; }
+  .release-detail { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+  .release-detail code { font-size: 11px; }
+  .release-status { margin-top: 10px; }
+  .release-retry {
+    margin-top: 12px;
+    padding: 7px 14px;
+    color: var(--brand);
+    font: inherit;
+    background: #fff;
+    border: 1px solid var(--stroke);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .release-retry:hover { border-color: rgba(86,71,222,.45); }
+  @media (max-width: 480px) {
+    .release-card { padding: 19px 16px; }
+    .release-artifact { grid-template-columns: 1fr; }
+    .release-artifact .btn { grid-row: auto; }
+  }
 
   /* ---------- Footer ---------- */
   footer { border-top: 1px solid var(--stroke); padding: 26px 0; }
@@ -315,13 +358,13 @@
       <h1>素材倒进去<br><span class="grad">vlog 自己长出来</span></h1>
       <p class="sub">把一个旅行素材目录剪成<strong>约一分钟的成片</strong>。场记、大纲、粗剪都由 AI 先做，每一阶段你都可以插手，确认了才算数。</p>
       <div class="cta-row">
-        <a class="btn" href="#download" aria-disabled="true">
+        <a class="btn" href="#download">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/>
           </svg>
           下载 macOS 版
         </a>
-        <span class="cta-note">下载地址即将开放，先走邀请码渠道</span>
+        <span class="cta-note">macOS Apple Silicon · 获取 ZIP 或 DMG 安装包</span>
       </div>
       <p class="hero-req">一台 Apple Silicon Mac 就够，Python、ffmpeg、渲染环境都装在 App 里</p>
     </div>
@@ -442,8 +485,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="10" r="2.6"/><path d="M9 17.5h6"/>
           </svg>
-          <h3>关键帧上云，原片不留</h3>
-          <p>AI 场记只上传压缩过的关键帧；原片留在你电脑上，只读不改。</p>
+          <h3>原片不上云，安心剪辑</h3>
+          <p>原始视频保留在你的设备上，本地完成素材处理。使用 AI 功能时，仅发送必要的分析数据。</p>
         </div>
         <div class="feat">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -468,13 +511,11 @@
     <div class="wrap">
       <h2>下一个旅行，回来就能剪</h2>
       <p>导入，看 AI 剪一版，改几句，导出。</p>
-      <a class="btn" href="#" aria-disabled="true">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"/>
-        </svg>
-        下载 macOS 版
-      </a>
-      <span class="cta-note">下载地址即将开放，先走邀请码渠道</span>
+      <div id="release-card" class="release-card" aria-live="polite" aria-busy="true">
+        <h3>macOS Apple Silicon</h3>
+        <p id="release-status" class="release-status" role="status">正在读取最新版本…</p>
+        <div id="release-content"></div>
+      </div>
     </div>
   </section>
 </main>
@@ -497,6 +538,179 @@
     <p>© 2026 Vlogo · AI 主导剪辑，你在阶段之间把关 · 邀请内测中</p>
   </div>
 </footer>
+
+<script>
+(() => {
+  const metadataUrl = 'https://vlogo-dl.dijingchao.com/releases/channels/stable.json';
+  const localFixtures = new Set(['available', 'zip-only', 'withdrawn', 'no-artifacts', 'invalid', 'untrusted-url', 'missing']);
+  const localHost = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
+  const requestedFixture = new URLSearchParams(location.search).get('fixture');
+  const source = localHost && localFixtures.has(requestedFixture)
+    ? `/.local-evidence/vdev02-downloads/fixtures/${requestedFixture}.json`
+    : metadataUrl;
+  const card = document.querySelector('#release-card');
+  const status = document.querySelector('#release-status');
+  const content = document.querySelector('#release-content');
+  const semver = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-((0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*)(\.(0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*))*))?$/;
+  const allowedHost = 'vlogo-dl.dijingchao.com';
+
+  function isDate(value) {
+    return typeof value === 'string' && Number.isFinite(Date.parse(value));
+  }
+
+  function validate(data) {
+    if (!data || data.schemaVersion !== 1 || data.channel !== 'stable' || !isDate(data.updatedAt) ||
+        typeof data.latest !== 'string' || !semver.test(data.latest) || !Array.isArray(data.releases)) {
+      throw new Error('发布元数据格式无效');
+    }
+    const release = data.releases.find(item => item && item.version === data.latest);
+    if (!release || !isDate(release.releasedAt) || !Array.isArray(release.artifacts)) {
+      throw new Error('找不到 stable 指向的版本');
+    }
+    if (release.withdrawn) return { data, release, withdrawn: true };
+    const seen = new Set();
+    for (const artifact of release.artifacts) {
+      if (!artifact || artifact.os !== 'darwin' || artifact.arch !== 'arm64' ||
+          !['dmg', 'zip'].includes(artifact.format) || seen.has(artifact.format) ||
+          typeof artifact.url !== 'string' || !/^[0-9a-f]{64}$/.test(artifact.sha256) ||
+          !Number.isSafeInteger(artifact.size) || artifact.size < 1) {
+        throw new Error('制品信息格式无效');
+      }
+      let url;
+      try {
+        url = new URL(artifact.url);
+      } catch {
+        throw new Error('制品下载地址无效');
+      }
+      if (url.protocol !== 'https:' || url.hostname !== allowedHost ||
+          !url.pathname.startsWith(`/releases/${release.version}/`)) {
+        throw new Error('制品下载地址不在允许范围内');
+      }
+      seen.add(artifact.format);
+    }
+    return { data, release, withdrawn: false };
+  }
+
+  function humanSize(bytes) {
+    return `${(bytes / 1024 / 1024).toLocaleString('zh-CN', { maximumFractionDigits: 1 })} MB`;
+  }
+
+  function showMessage(message, retry = false) {
+    content.replaceChildren();
+    status.textContent = message;
+    if (retry) {
+      const button = document.createElement('button');
+      button.className = 'release-retry';
+      button.type = 'button';
+      button.textContent = '重试';
+      button.addEventListener('click', loadRelease);
+      content.append(button);
+    }
+    card.setAttribute('aria-busy', 'false');
+  }
+
+  function render(result) {
+    const { data, release } = result;
+    content.replaceChildren();
+    if (result.withdrawn) {
+      const reason = document.createElement('p');
+      reason.className = 'release-status';
+      reason.textContent = `版本 ${release.version} 已撤回。${release.withdrawn.reason || ''}${release.withdrawn.replacedBy ? ` 当前请使用 ${release.withdrawn.replacedBy}。` : ''}`;
+      content.append(reason);
+      status.textContent = '此版本已撤回';
+      card.setAttribute('aria-busy', 'false');
+      return;
+    }
+
+    const meta = document.createElement('p');
+    meta.className = 'release-meta';
+    meta.textContent = `版本 ${release.version} · 发布于 ${new Date(release.releasedAt).toLocaleDateString('zh-CN')} · 元数据更新于 ${new Date(data.updatedAt).toLocaleDateString('zh-CN')}`;
+    content.append(meta);
+
+    const artifacts = document.createElement('div');
+    artifacts.className = 'release-artifacts';
+    for (const format of ['dmg', 'zip']) {
+      const artifact = release.artifacts.find(item => item.format === format);
+      const row = document.createElement('div');
+      row.className = 'release-artifact';
+      if (!artifact) {
+        const unavailable = document.createElement('p');
+        unavailable.className = 'release-status';
+        unavailable.textContent = `${format.toUpperCase()} 暂无可用制品`;
+        row.append(unavailable);
+      } else {
+        const link = document.createElement('a');
+        link.className = 'btn';
+        link.href = artifact.url;
+        link.textContent = `下载 ${format.toUpperCase()}`;
+        link.setAttribute('aria-label', `下载 Vlogo ${release.version} ${format.toUpperCase()}，macOS Apple Silicon`);
+        link.addEventListener('click', () => {
+          if (typeof window.gtag !== 'function') return;
+          window.gtag('event', 'download_click', {
+            format,
+            arch: 'arm64',
+            os: 'darwin',
+            version: release.version,
+          });
+        });
+        const size = document.createElement('span');
+        size.className = 'release-detail';
+        size.textContent = `文件大小 ${humanSize(artifact.size)}（${artifact.size.toLocaleString('en-US')} 字节）`;
+        const hash = document.createElement('span');
+        hash.className = 'release-detail';
+        const label = document.createElement('span');
+        label.textContent = 'SHA-256 ';
+        const code = document.createElement('code');
+        code.textContent = artifact.sha256;
+        hash.append(label, code);
+        row.append(link, size, hash);
+      }
+      artifacts.append(row);
+    }
+    content.append(artifacts);
+    status.textContent = release.artifacts.length ? '适用于 macOS Apple Silicon' : '当前版本暂时没有可下载制品';
+    card.setAttribute('aria-busy', 'false');
+  }
+
+  async function loadRelease() {
+    card.setAttribute('aria-busy', 'true');
+    status.textContent = '正在读取最新版本…';
+    content.replaceChildren();
+    try {
+      const response = await fetch(source, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      render(validate(await response.json()));
+    } catch (error) {
+      showMessage(error instanceof TypeError ? '暂时无法连接版本服务，请检查网络后重试。' : '暂时无法读取有效的发布信息，请稍后重试。', true);
+    }
+  }
+
+  loadRelease();
+})();
+</script>
+
+<script>
+(() => {
+  const measurementId = document.querySelector('meta[name="ga4-measurement-id"]')?.content.trim() ?? '';
+  if (!/^G-[A-Z0-9]{10}$/.test(measurementId)) return;
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = window.gtag || gtag;
+  window.gtag('js', new Date());
+  window.gtag('config', measurementId, {
+    send_page_view: false,
+    page_location: `${location.origin}${location.pathname}`,
+    page_title: 'Vlogo',
+  });
+  window.gtag('event', 'page_view');
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+  document.head.append(script);
+})();
+</script>
 
 </body>
 </html>

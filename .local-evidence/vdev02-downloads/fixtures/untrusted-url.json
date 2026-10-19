@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "channel": "stable",
+  "updatedAt": "2026-10-17T04:00:00Z",
+  "latest": "9.9.9-test.1",
+  "releases": [
+    {
+      "version": "9.9.9-test.1",
+      "releasedAt": "2026-10-17T03:59:00Z",
+      "notes": "本地浏览器验收合成夹具，不代表线上发布。",
+      "artifacts": [
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "format": "dmg",
+          "url": "https://untrusted.invalid/releases/9.9.9-test.1/Vlogo.dmg",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "size": 123456789
+        },
+        {
+          "os": "darwin",
+          "arch": "arm64",
+          "format": "zip",
+          "url": "https://vlogo-dl.dijingchao.com/releases/9.9.9-test.1/Vlogo-9.9.9-test.1-darwin-arm64.zip",
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "size": 234567890
+        }
+      ]
+    }
+  ]
+}
