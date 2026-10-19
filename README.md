@@ -1,16 +1,21 @@
 # Vlogo 秒剪 — Home
 
-[Vlogo 秒剪](https://github.com/alswl/vlogo) 的 landing page，通过 GitHub Pages 发布。
+[Vlogo 秒剪](https://github.com/alswl/vlogo) 的静态 landing page，使用 Vite、React 与 TypeScript 构建，由 GitHub Pages 托管。
 
-- 线上地址：<https://vlogo.0xyz.com/>（自定义域名，`CNAME` 文件维护）
+- 线上地址：<https://vlogo.0xyz.com/>（`public/CNAME` 在构建时复制到发布根目录）
 
-## 发布
-
-`master` 分支根目录即站点内容，push 后 Pages 自动构建部署。自定义域名待配置。
-
-## 本地预览
+## 开发
 
 ```bash
-python3 -m http.server 8000
-# 打开 http://localhost:8000
+npm ci
+npm run dev
 ```
+
+## 构建与本地静态预览
+
+```bash
+npm run build
+npm run preview
+```
+
+构建结果写入 `dist/`，Vite 使用 `/` 作为自定义域名的站点 base。
