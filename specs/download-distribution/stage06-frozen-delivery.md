@@ -195,3 +195,10 @@ R5 source 的既有标识仍仅为 Captain 提供的前缀 `17627ae8…`；本�
 本轮官网候选 `index.html` 为未提交 WIP，大小 297273 bytes，SHA-256 `a39f189d744b70e4bf35af08fe31c2cbbe5050cab7785f2950a96bfe00ebeb85`。审阅报告入口：[privacy-copy-review.html](evidence/privacy-copy-review.html)。报告中的桌面/窄屏截图来自本树隔离本地运行 `.local-evidence/privacy-copy-review-20261019-1918/desktop-1440.png` 与 `mobile-390.png`，并以相同字节副本保存在 `evidence/privacy-copy-desktop-1440.png` 与 `evidence/privacy-copy-mobile-390.png` 供 PR 报告显示；原有旧截图及指纹继续留存于旧证据目录和报告折叠历史中。
 
 仅按本地 `index.html` 的 href 检查，未发现隐私告知或隐私政策入口；未访问外网，也未据此推断隐私告知或协议本身的内容。
+
+## 官网 PR 提交绑定（2026-10-19）
+
+- 首次官网候选提交：`ff66e2dace2003088cf18c9e2404ebe44190aaa5`（分支 `vdev-02-local-downloads`），基线 `master` / `3ca752ae6c7a16f5f9f52b7b5a1a64a94f015469`。该提交包含 31 个官网源码、下载/GA/隐私相关文档、六份合成 metadata fixture 与 16 张官网状态截图；不包含 App 源码/包、真实媒体、浏览器/npm 缓存及运行临时文件。
+- PR：[feat: 官网接入 macOS 下载并更新隐私宣传文案](https://github.com/alswl/vlogo-home/pull/1)，base `master`。仅创建 PR，未合并、未发布。
+- 当前源码候选仍为 `index.html` 297273 bytes，SHA-256 `a39f189d744b70e4bf35af08fe31c2cbbe5050cab7785f2950a96bfe00ebeb85`。隐私卡片截图随 PR 提交：桌面 `evidence/privacy-copy-desktop-1440.png` 15929 bytes，SHA-256 `c52e2297823113033d0cfc82f2bae220c7d0e360de0cce0f0f6a1ea348b957f7`；窄屏 `evidence/privacy-copy-mobile-390.png` 15513 bytes，SHA-256 `9d9d87b40c0499ed983244a7753f3495cb240c0c562d089c68134e0beb77d5b9`。两图与 `.local-evidence/privacy-copy-review-20261019-1918/` 的本机渲染截图字节一致。
+- PR 创建后读取 GitHub checks：`gh pr checks` 返回该分支 **no checks reported**；不代表通过。本次提交回合未新增浏览器、产品测试或独立 QA 轮数。既有本机证据和限制见 VDEV-02、VDEV-04 与隐私文案 HTML 报告；生产 stable JSON/CDN、真实下载、GA 接收、人工亲验和发布均未在本官网席验证。
