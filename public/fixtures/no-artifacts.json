@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "channel": "stable",
+  "updatedAt": "2026-10-17T04:00:00Z",
+  "latest": "9.9.9-test.1",
+  "releases": [
+    {
+      "version": "9.9.9-test.1",
+      "releasedAt": "2026-10-17T03:59:00Z",
+      "notes": "本地浏览器验收合成夹具，不代表线上发布。",
+      "artifacts": []
+    }
+  ]
+}
