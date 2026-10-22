@@ -1,7 +1,7 @@
 const translations: Record<string, string> = {
   'nav-tag': 'macOS · Apple Silicon · Beta access open',
   'hero-eyebrow': 'Applications for beta access are open',
-  'hero-title': 'Drop in your footage<br><span class="grad">your vlog takes shape</span>',
+  'hero-title': 'AI video editing<br><span class="grad">travel footage to vlog</span>',
   'hero-sub': 'Turn a travel footage folder into a <strong>one-minute video</strong>. AI creates the shot log, outline, and rough cut. You can step in at every stage; nothing moves forward until you approve it.',
   'hero-download': 'Download for macOS',
   'hero-note': 'macOS Apple Silicon · ZIP or DMG',
