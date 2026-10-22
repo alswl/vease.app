@@ -7,9 +7,10 @@ import { ProductShots } from './components/ProductShots';
 import { SiteFooter } from './components/SiteFooter';
 import { Workflow } from './components/Workflow';
 import { initializeAnalytics } from './lib/analytics';
+import { initializeLanguage } from './lib/language';
 
 export function App() {
-  useEffect(() => { initializeAnalytics(); }, []);
+  useEffect(() => { initializeAnalytics(); initializeLanguage(); }, []);
   return <>
     <BrandHeader />
     <main>

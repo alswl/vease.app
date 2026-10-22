@@ -7,7 +7,7 @@ export function initializeAnalytics(): void {
   const gtag: NonNullable<Window['gtag']> = (...args) => { window.dataLayer?.push(args); };
   window.gtag = gtag;
   gtag('js', new Date());
-  gtag('config', measurementId, { send_page_view: false, page_location: `${location.origin}${location.pathname}`, page_title: 'Vlogo' });
+  gtag('config', measurementId, { send_page_view: false, page_location: `${location.origin}${location.pathname}`, page_title: 'Vease' });
   gtag('event', 'page_view');
   const script = document.createElement('script');
   script.async = true;
