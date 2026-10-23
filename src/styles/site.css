@@ -284,6 +284,8 @@
   }
   .foot .brand { font-size: 13.5px; color: var(--muted); }
   .foot .brand-mark { width: 17px; height: 17px; }
+  .footer-share-link { color: var(--muted); font-size: 13px; text-decoration: none; }
+  .footer-share-link:hover { color: var(--brand); }
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }

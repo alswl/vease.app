@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Sitemap: https://vease.app/sitemap.xml
 
 # 显式欢迎 AI / 搜索引擎爬虫（GEO）
 User-agent: GPTBot
