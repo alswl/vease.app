@@ -94,9 +94,6 @@ export function SiteFooter() {
           Vease
         </div>
         <p>{t("footer-copy")}</p>
-        <a className="footer-share-link" href="/banner/">
-          {t("footer-share")}
-        </a>
       </div>
     </footer>
   );

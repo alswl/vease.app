@@ -45,7 +45,6 @@
   "footer-copy": "© 2026 Vease · AI helps with the cut. You tell the story. · Private beta",
   "language-switch": "切换到中文",
   "language-name": "中文",
-  "footer-share": "Share banner and design notes",
   "release-loading": "Loading the latest release…",
   "release-network-error": "Could not connect to the release service. Check your connection and try again.",
   "release-invalid": "Could not read valid release information. Please try again later.",

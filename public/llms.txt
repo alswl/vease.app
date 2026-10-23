@@ -15,5 +15,4 @@ Vease是一款 macOS 桌面应用（含网页端），面向视频创作者。�
 ## 链接
 
 - 官网（本页）：<https://vease.app/>
-- 分享横幅与设计说明：<https://vease.app/banner/>
 - 开源仓库与文档：<https://github.com/alswl/vlogo>
