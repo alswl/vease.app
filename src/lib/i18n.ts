@@ -25,6 +25,7 @@ await i18n
   });
 
 function synchronizeLanguage(): void {
+  if (typeof document === "undefined") return;
   const language = i18n.resolvedLanguage === "zh" ? "zh-CN" : "en";
   document.documentElement.lang = language;
   document.documentElement.dataset.language = language;

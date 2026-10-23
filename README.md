@@ -25,7 +25,9 @@ npm run preview
 ```
 
 构建结果写入 `dist/`，Vite 使用 `/` 作为自定义域名的站点 base。
+构建最后一步用 `src/entry-server.tsx` 把中文首页预渲染进 `dist/index.html`，供搜索引擎直接读取正文；浏览器端中文直接水合，其他语言重新渲染。
 Build output is written to `dist/`; Vite uses `/` as the base for the custom domain.
+The final build step prerenders the Chinese landing page into `dist/index.html` via `src/entry-server.tsx` so crawlers can read the body; Chinese visitors hydrate it, other languages re-render.
 
 Cloudflare Workers Builds 项目使用以下设置：
 

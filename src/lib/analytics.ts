@@ -1,4 +1,4 @@
-const measurementId = document.querySelector<HTMLMetaElement>('meta[name="ga4-measurement-id"]')?.content.trim() ?? '';
+const measurementId = typeof document === 'undefined' ? '' : document.querySelector<HTMLMetaElement>('meta[name="ga4-measurement-id"]')?.content.trim() ?? '';
 const validId = /^G-[A-Z0-9]{10}$/.test(measurementId);
 
 export function initializeAnalytics(): void {
