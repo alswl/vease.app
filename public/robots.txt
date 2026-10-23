@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+# 下载元数据测试夹具，仅本地预览使用
+Disallow: /fixtures/
 Sitemap: https://vease.app/sitemap.xml
 
 # 显式欢迎 AI / 搜索引擎爬虫（GEO）
