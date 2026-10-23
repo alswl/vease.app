@@ -40,3 +40,20 @@ Cloudflare Workers Builds 项目使用以下设置：
 GitHub Actions 仅在 Pull Request 上运行构建检查；Cloudflare Workers Builds 负责部署。公开官网的生产访问不启用 Cloudflare Access；预览环境可按需保护。
 
 Configure Workers Builds with Worker name `vease-app`, production branch `master`, build command `npm run build`, deploy command `npx wrangler deploy`, preview command `npx wrangler preview`, root directory `/`, and build variable `NODE_VERSION=22`. Wrangler uploads `dist/` as static assets without a Worker script. Unknown paths return 404. Configure the custom domain in Cloudflare Domains & Routes; the retained `CNAME` file does not bind the domain. GitHub Actions only checks pull request builds.
+
+## 国际化 / Internationalization
+
+Landing 页使用 `i18next`、`react-i18next` 和 `i18next-browser-languagedetector`。
+中英文文案分别维护在 `src/locales/en.json`、`src/locales/zh.json`，两个文件的 key 应保持一致。
+组件使用 `useTranslation()`；含换行、强调或渐变样式的文案使用 `<Trans>`。
+
+默认语言为英文；首次访问根据浏览器首选语言选择中英文，其余语言回退为英文。
+手动切换的选择保存在 `localStorage` 的 `vease-language`，优先于浏览器语言，并兼容已有的 `zh-CN` 值。
+语言资源随静态站点打包，无需翻译服务或后端。切换语言不会重新请求下载元数据。
+独立的 `/banner/` 分享说明页及静态 SEO 元数据暂保持原有内容。
+
+Landing copy lives in `src/locales/en.json` and `src/locales/zh.json`, rendered with
+`useTranslation()` and `<Trans>`. English is the fallback; a Chinese browser preference
+selects Chinese. Manual choices take precedence and persist under `vease-language`.
+Resources are bundled locally, and switching languages does not refetch release metadata.
+The standalone `/banner/` page and static SEO metadata retain their existing content.

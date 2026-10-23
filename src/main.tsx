@@ -1,9 +1,14 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { App } from './App';
-import './styles/site.css';
+import "./lib/i18n";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { App } from "./App";
+import "./styles/site.css";
 
-const root = document.getElementById('root');
-if (!root) throw new Error('Missing #root mount point');
+const root = document.getElementById("root");
+if (!root) throw new Error("Missing #root mount point");
 
-createRoot(root).render(<StrictMode><App /></StrictMode>);
+createRoot(root).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
