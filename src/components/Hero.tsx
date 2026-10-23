@@ -4,7 +4,6 @@ export function Hero() {
   const { t } = useTranslation();
   return (
     <section className="hero">
-      <div className="hero-grid" aria-hidden="true"></div>
       <div className="wrap">
         <span className="hero-eyebrow">
           <span className="dot" />
