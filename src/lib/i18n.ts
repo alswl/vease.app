@@ -4,8 +4,10 @@ import { initReactI18next } from "react-i18next";
 import en from "../locales/en.json";
 import zh from "../locales/zh.json";
 
+const languageDetector = new LanguageDetector();
+
 await i18n
-  .use(LanguageDetector)
+  .use(languageDetector)
   .use(initReactI18next)
   .init({
     resources: { en: { translation: en }, zh: { translation: zh } },
@@ -33,11 +35,7 @@ i18n.on("languageChanged", synchronizeLanguage);
 
 export function changeLanguage(): void {
   const language = i18n.resolvedLanguage === "zh" ? "en" : "zh";
-  try {
-    localStorage.setItem("vease-language", language);
-  } catch {
-    /* Switching remains available when browser storage is disabled. */
-  }
+  languageDetector.cacheUserLanguage(language, ["localStorage"]);
   void i18n.changeLanguage(language);
 }
 

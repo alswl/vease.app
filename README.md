@@ -57,3 +57,15 @@ Landing copy lives in `src/locales/en.json` and `src/locales/zh.json`, rendered 
 selects Chinese. Manual choices take precedence and persist under `vease-language`.
 Resources are bundled locally, and switching languages does not refetch release metadata.
 The standalone `/banner/` page and static SEO metadata retain their existing content.
+
+## 校验与测试 / Validation and tests
+
+下载元数据通过 Zod schema 校验并推导类型，版本格式由 `semver` 校验；只接受无前缀、无空白、无 build metadata 的规范版本号。
+URL 白名单、版本路径、格式唯一性、完整 SHA-256 和正整数字节数继续强制校验；撤回版本不暴露制品。
+语言选择通过 detector 的 `cacheUserLanguage` 接口存储，只有手动切换时写入偏好。
+
+```bash
+npm test
+```
+
+回归测试使用本地合成 fixtures，不请求生产服务；PR CI 同时运行测试和构建。
