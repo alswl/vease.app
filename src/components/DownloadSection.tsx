@@ -11,7 +11,7 @@ function humanSize(bytes: number, language: string): string {
   return `${(bytes / 1024 / 1024).toLocaleString(language === "en" ? "en-US" : "zh-CN", { maximumFractionDigits: 1 })} MB`;
 }
 
-export function DownloadSection() {
+export function ReleaseDownloadSection() {
   const { t, i18n } = useTranslation();
   const language = i18n.resolvedLanguage === "zh" ? "zh-CN" : "en";
   const [result, setResult] = useState<ValidatedRelease | null>(null);
@@ -160,6 +160,22 @@ export function DownloadSection() {
               </button>
             )}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function DownloadSection() {
+  const { t } = useTranslation();
+  return (
+    <section className="final" id="download">
+      <div className="wrap">
+        <h2>{t("download-title")}</h2>
+        <p>{t("download-desc")}</p>
+        <div className="release-card">
+          <h3>{t("release-platform")}</h3>
+          <p className="release-status">{t("release-coming-soon")}</p>
         </div>
       </div>
     </section>
