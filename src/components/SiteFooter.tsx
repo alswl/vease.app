@@ -91,7 +91,7 @@ export function SiteFooter() {
               mask="url(#vtm2-edit-cut)"
             />
           </svg>
-          <a className="brand-domain" href="https://vease.app/">vease.app</a>
+          Vease
         </div>
         <p>{t("footer-copy")}</p>
         <a className="footer-share-link" href="/banner/">

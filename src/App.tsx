@@ -17,8 +17,8 @@ export function App() {
       <BrandHeader />
       <main>
         <Hero />
-        <Workflow />
         <ProductShots />
+        <Workflow />
         <Highlights />
         <DownloadSection />
       </main>

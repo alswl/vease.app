@@ -11,3 +11,6 @@
 
 # TypeScript incremental build metadata
 /tsconfig.tsbuildinfo
+
+# Local browser evidence and screenshot harnesses
+/.local-evidence/

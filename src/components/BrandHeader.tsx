@@ -92,7 +92,7 @@ export function BrandHeader() {
               mask="url(#vtm1-edit-cut)"
             />
           </svg>
-          <a className="brand-domain" href="https://vease.app/">vease.app</a>
+          Vease
         </div>
         <span className="nav-tag">{t("nav-tag")}</span>
         <button
