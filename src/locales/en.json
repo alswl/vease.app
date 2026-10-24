@@ -35,7 +35,7 @@
   "feature1-title": "Get past the folder full of footage",
   "feature1-desc": "A folder full of filenames you no longer recognize? Let AI organize the shots, suggest an outline, and make a first cut. Press play and start deciding: keep this, shorten that.",
   "feature2-title": "Original footage stays on your Mac",
-  "feature2-desc": "Originals stay local, read-only, and are never uploaded. The editing AI runs on your Mac. Cloud shot logging receives up to 3 compressed keyframes per shot. Uploaded frames are retained long-term in private storage readable only by the operator.",
+  "feature2-desc": "Original footage stays on your Mac. The AI director analyzes selected frames to understand your shots. Preview, adjust, and undo edits as you go.",
   "feature3-title": "Start with a folder of footage",
   "feature3-desc": "Put your video footage in one folder and import it. Core editing and export tools are built in, so you can start without choosing and learning another editing package.",
   "feature4-title": "Ask for the change you want",
