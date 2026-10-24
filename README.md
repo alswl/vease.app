@@ -10,66 +10,33 @@ Vease is an AI video editing app for macOS Apple Silicon, built around getting a
 
 This repository contains the Vease static website in Simplified Chinese and English, built with Vite, React, and TypeScript and hosted on Cloudflare Workers Static Assets.
 
-## 开发 / Development
+## 快速开始 / Quick start
+
+在仓库根目录执行以下命令，启动本地开发服务器。
+Run these commands from the repository root to start the development server.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-## 构建与本地静态预览 / Build and preview
+构建、预览与环境说明见[本地开发与构建](docs/dev/setup.md)。
+See [local development and build](docs/dev/setup.md) for build, preview, and environment details.
 
-```bash
-npm run build
-npm run preview
-```
+## 文档 / Documentation
 
-构建结果写入 `dist/`，Vite 使用 `/` 作为自定义域名的站点 base。
-构建最后一步用 `src/entry-server.tsx` 把中文首页预渲染进 `dist/index.html`，供搜索引擎直接读取正文；浏览器端中文直接水合，其他语言重新渲染。
-Build output is written to `dist/`; Vite uses `/` as the base for the custom domain.
-The final build step prerenders the Chinese landing page into `dist/index.html` via `src/entry-server.tsx` so crawlers can read the body; Chinese visitors hydrate it, other languages re-render.
+从[文档首页 / Documentation](docs/README.md)进入，或按任务选择：
+Start with the documentation index, or choose a task below.
 
-Cloudflare Workers Builds 项目使用以下设置：
+<a id="开发--development"></a>
+<a id="构建与本地静态预览--build-and-preview"></a>
+<a id="国际化--internationalization"></a>
+<a id="校验与测试--validation-and-tests"></a>
 
-- Worker name：`vease-app`（与 `wrangler.jsonc` 一致）
-- Production branch：`master`
-- Build command：`npm run build`
-- Deploy command：`npx wrangler deploy`
-- Preview command：`npx wrangler preview`
-- Root directory：`/`
-- Build variable：`NODE_VERSION=22`
-
-`wrangler.jsonc` 指定上传 `dist/`，无需 Worker 脚本。未匹配的路径返回 404，不回退到首页。Wrangler 版本由 `package-lock.json` 锁定。自定义域名 `vease.app` 在 Cloudflare 项目的 Domains & Routes 中配置；`CNAME` 文件保留为静态资产，不负责 Cloudflare 域名绑定。
-
-GitHub Actions 仅在 Pull Request 上运行构建检查；Cloudflare Workers Builds 负责部署。公开官网的生产访问不启用 Cloudflare Access；预览环境可按需保护。
-
-Configure Workers Builds with Worker name `vease-app`, production branch `master`, build command `npm run build`, deploy command `npx wrangler deploy`, preview command `npx wrangler preview`, root directory `/`, and build variable `NODE_VERSION=22`. Wrangler uploads `dist/` as static assets without a Worker script. Unknown paths return 404. Configure the custom domain in Cloudflare Domains & Routes; the retained `CNAME` file does not bind the domain. GitHub Actions only checks pull request builds.
-
-## 国际化 / Internationalization
-
-Landing 页使用 `i18next`、`react-i18next` 和 `i18next-browser-languagedetector`。
-中英文文案分别维护在 `src/locales/en.json`、`src/locales/zh.json`，两个文件的 key 应保持一致。
-组件使用 `useTranslation()`；含换行、强调或渐变样式的文案使用 `<Trans>`。
-
-默认语言为英文；首次访问根据浏览器首选语言选择中英文，其余语言回退为英文。
-手动切换的选择保存在 `localStorage` 的 `vease-language`，优先于浏览器语言，并兼容已有的 `zh-CN` 值。
-语言资源随静态站点打包，无需翻译服务或后端。切换语言不会重新请求下载元数据。
-静态 SEO 元数据暂保持原有内容。
-
-Landing copy lives in `src/locales/en.json` and `src/locales/zh.json`, rendered with
-`useTranslation()` and `<Trans>`. English is the fallback; a Chinese browser preference
-selects Chinese. Manual choices take precedence and persist under `vease-language`.
-Resources are bundled locally, and switching languages does not refetch release metadata.
-Static SEO metadata retains its existing content.
-
-## 校验与测试 / Validation and tests
-
-下载元数据通过 Zod schema 校验并推导类型，版本格式由 `semver` 校验；只接受无前缀、无空白、无 build metadata 的规范版本号。
-URL 白名单、版本路径、格式唯一性、完整 SHA-256 和正整数字节数继续强制校验；撤回版本不暴露制品。
-语言选择通过 detector 的 `cacheUserLanguage` 接口存储，只有手动切换时写入偏好。
-
-```bash
-npm test
-```
-
-回归测试使用本地合成 fixtures，不请求生产服务；PR CI 同时运行测试和构建。
+| 任务 / Task | 文档 / Document |
+|---|---|
+| 开发、构建与预览 / Develop, build, preview | [本地开发与构建 / Local development and build](docs/dev/setup.md) |
+| 查看静态发布设置 / Check static delivery settings | [静态站点发布 / Static site delivery](docs/dev/deployment.md) |
+| 修改翻译与语言选择 / Edit translations and language selection | [国际化 / Internationalization](docs/dev/internationalization.md) |
+| 校验下载元数据与运行测试 / Validate download metadata and run tests | [校验与测试 / Validation and tests](docs/dev/validation.md) |
+| 查看截图来源与采集范围 / Check screenshot provenance and scope | [Product screenshots](src/assets/README.md) |

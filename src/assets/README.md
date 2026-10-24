@@ -9,3 +9,5 @@ Photo sources (Unsplash):
 - https://images.unsplash.com/photo-1472396961693-142e6e269027
 
 The harness and source captures are local-only under `.local-evidence/layout-20261023/`. The screenshots use the existing application layout without changing application source or contacting production APIs.
+
+[Developer documentation](../../docs/dev/README.md) · [Documentation](../../docs/README.md)
