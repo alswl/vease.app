@@ -15,3 +15,6 @@
 
 # Local browser evidence and screenshot harnesses
 /.local-evidence/
+
+# Task-local scratch and release manifests (scripts/semver-release.sh)
+/.scratch/

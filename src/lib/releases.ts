@@ -2,7 +2,7 @@ import { z } from "zod";
 import validVersion from "semver/functions/valid";
 
 const metadataUrl =
-  "https://vlogo-dl.dijingchao.com/releases/channels/stable.json";
+  "https://dl-vease.dijingchao.com/releases/channels/stable.json";
 const localFixtures = new Set([
   "available",
   "zip-only",
@@ -12,7 +12,7 @@ const localFixtures = new Set([
   "untrusted-url",
   "missing",
 ]);
-const allowedHost = "vlogo-dl.dijingchao.com";
+const allowedHost = "dl-vease.dijingchao.com";
 
 const versionSchema = z.string().refine(
   // Preserve canonical versions without prefixes, whitespace, or build metadata.
