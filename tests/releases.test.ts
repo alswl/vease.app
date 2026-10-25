@@ -71,7 +71,7 @@ const invalidChanges: Record<string, (data: any) => void> = {
   },
   "wrong release path": (data) => {
     data.releases[0].artifacts[0].url =
-      "https://vlogo-dl.dijingchao.com/releases/1.2.3/file.dmg";
+      "https://dl-vease.dijingchao.com/releases/1.2.3/file.dmg";
   },
   "invalid URL": (data) => {
     data.releases[0].artifacts[0].url = "invalid";
@@ -142,7 +142,7 @@ test("fixtures are limited to loopback and recognized names", () => {
       assert.equal(
         releaseSource(),
         hostname === "vease.app"
-          ? "https://vlogo-dl.dijingchao.com/releases/channels/stable.json"
+          ? "https://dl-vease.dijingchao.com/releases/channels/stable.json"
           : "/fixtures/available.json",
       );
     }
@@ -152,7 +152,7 @@ test("fixtures are limited to loopback and recognized names", () => {
     });
     assert.equal(
       releaseSource(),
-      "https://vlogo-dl.dijingchao.com/releases/channels/stable.json",
+      "https://dl-vease.dijingchao.com/releases/channels/stable.json",
     );
   } finally {
     Reflect.deleteProperty(globalThis, "location");
