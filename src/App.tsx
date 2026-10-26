@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { BrandHeader } from "./components/BrandHeader";
-import { DownloadSection } from "./components/DownloadSection";
+import { DownloadSection, ReleaseDownloadSection } from "./components/DownloadSection";
 import { Hero } from "./components/Hero";
 import { Highlights } from "./components/Highlights";
 import { ProductShots } from "./components/ProductShots";
@@ -20,7 +20,7 @@ export function App() {
         <ProductShots />
         <Workflow />
         <Highlights />
-        <DownloadSection />
+        {import.meta.env.VITE_RELEASE_DOWNLOADS_ENABLED === "true" ? <ReleaseDownloadSection /> : <DownloadSection />}
       </main>
       <SiteFooter />
     </>

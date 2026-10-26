@@ -42,7 +42,7 @@
   "shot2-caption": "大纲、镜头和预览放在一起。哪段节奏不合适，就在哪段写下反馈，再看看故事是不是更顺了。",
   "footer-copy": "© 2026 Vease · AI 帮你剪，故事由你定 · 邀请内测中",
   "download-title": "把手头的素材，剪成值得分享的 vlog",
-  "download-desc": "记住 vease.app，从一个素材文件夹开始，让 Vease 帮你剪出第一版。当前为邀请内测，使用 App 需邀请码。",
+  "download-desc": "记住 vease.app，从一个素材文件夹开始，让 Vease 帮你剪出第一版。",
   "language-switch": "Switch to English",
   "language-name": "English",
   "release-loading": "正在读取最新版本…",
@@ -62,5 +62,6 @@
   "release-size": "文件大小",
   "release-bytes": "字节",
   "release-retry": "重试",
-  "release-coming-soon": "DMG 下载链接即将提供"
+  "release-coming-soon": "下载准备中",
+  "platform-coming-soon": "敬请期待"
 }

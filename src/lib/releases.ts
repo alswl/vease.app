@@ -5,6 +5,7 @@ const metadataUrl =
   "https://dl-vease.dijingchao.com/releases/channels/stable.json";
 const localFixtures = new Set([
   "available",
+  "alpha-candidate",
   "zip-only",
   "withdrawn",
   "no-artifacts",
