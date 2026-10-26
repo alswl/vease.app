@@ -5,8 +5,8 @@ Run the command from the repository root.
 
 ## 当前首页 / Current landing page
 
-`src/App.tsx` 使用 `DownloadSection`，展示下载即将开放提示。它不挂载 `ReleaseDownloadSection`，也不请求 stable 发布元数据。下述元数据测试覆盖保留的模块，不代表当前首页已开放下载。
-`src/App.tsx` renders `DownloadSection`, which shows a coming-soon message. It does not mount `ReleaseDownloadSection` or request stable metadata. The metadata tests cover the retained module and do not establish that downloads are available on the landing page.
+`src/App.tsx` 默认使用 `DownloadSection`，展示下载即将开放提示，不请求 stable 元数据。仅当构建变量 `VITE_RELEASE_DOWNLOADS_ENABLED=true` 时挂载 `ReleaseDownloadSection`。本地可用 `?fixture=alpha-candidate#download` 验证已登记候选映射；这不表示生产已开放下载。完整准备范围见 `docs/first-launch/download-readiness.md`。
+The default build shows three platform cards without requesting metadata. Only an exact `VITE_RELEASE_DOWNLOADS_ENABLED=true` enables Apple Silicon release metadata; macOS Intel and Windows always remain non-interactive coming-soon cards. Local fixtures do not establish public download availability.
 
 ## 下载元数据模块 / Release metadata module
 

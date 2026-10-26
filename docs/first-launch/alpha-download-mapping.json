@@ -1,0 +1,54 @@
+{
+  "status": "preparation-only; no channel upload or availability claim",
+  "app_commit": "6efd9a121f4ee381623923aa36371c551a2e9109",
+  "artifacts": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "format": "zip",
+      "url": "https://dl-vease.dijingchao.com/releases/0.1.1-alpha.1/Vease-0.1.1-alpha.1-darwin-arm64.zip",
+      "sha256": "c5e904a84f613ec084e44e680914b2626e0faf3e5e30fe0c74d8957f57cfb720",
+      "size": 414046828
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "format": "dmg",
+      "url": "https://dl-vease.dijingchao.com/releases/0.1.1-alpha.1/Vease-0.1.1-alpha.1-darwin-arm64.dmg",
+      "sha256": "cf55fd7c9ca26210f94e693fe02a3674c8bc07717bd256935296aee127d18426",
+      "size": 614043044
+    }
+  ],
+  "metadata_draft": {
+    "schemaVersion": 1,
+    "channel": "stable",
+    "updatedAt": "2026-10-26T00:00:00Z",
+    "latest": "0.1.1-alpha.1",
+    "releases": [
+      {
+        "version": "0.1.1-alpha.1",
+        "releasedAt": "2026-10-26T00:00:00Z",
+        "notes": "Local candidate mapping only; not published or production channel metadata.",
+        "artifacts": [
+          {
+            "os": "darwin",
+            "arch": "arm64",
+            "format": "zip",
+            "url": "https://dl-vease.dijingchao.com/releases/0.1.1-alpha.1/Vease-0.1.1-alpha.1-darwin-arm64.zip",
+            "sha256": "c5e904a84f613ec084e44e680914b2626e0faf3e5e30fe0c74d8957f57cfb720",
+            "size": 414046828
+          },
+          {
+            "os": "darwin",
+            "arch": "arm64",
+            "format": "dmg",
+            "url": "https://dl-vease.dijingchao.com/releases/0.1.1-alpha.1/Vease-0.1.1-alpha.1-darwin-arm64.dmg",
+            "sha256": "cf55fd7c9ca26210f94e693fe02a3674c8bc07717bd256935296aee127d18426",
+            "size": 614043044
+          }
+        ]
+      }
+    ]
+  },
+  "final_binding": "freeze step must confirm version/source/tag/SHA and release URLs before any public switch"
+}

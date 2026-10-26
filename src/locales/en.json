@@ -62,5 +62,12 @@
   "release-size": "File size",
   "release-bytes": "bytes",
   "release-retry": "Retry",
-  "release-coming-soon": "DMG download link coming soon"
+  "release-coming-soon": "Download preparation in progress",
+  "platform-coming-soon": "Coming soon",
+  "invite-title": "Invitation-only beta",
+  "invite-login": "Connect the installed app to the Vease gateway, sign in with an email code, then activate with the code supplied by your inviter.",
+  "invite-credits": "Check the quote in the app before starting. Credits are granted or redeemed through the beta invitation channel; online purchases are not available. The first approved AI request pays for the run; continuing or retrying the same paid run does not charge another production fee.",
+  "invite-help": "For an invitation or help, contact your inviter or the owner in the beta group where you received your invitation. Do not share login codes, invitation codes, or original footage.",
+  "invite-retention": "Original footage stays on your Mac. Cloud analysis uploads key frames; the service retains those frames and necessary request and billing records. Contact the owner through your beta invitation channel for data-retention requests. No automatic deletion deadline is promised here.",
+  "invite-compensation": "Cancellation, failure, timeout, or disconnection does not trigger an automatic refund. Report unexpected charges through your beta invitation channel so the owner can investigate and handle compensation manually."
 }

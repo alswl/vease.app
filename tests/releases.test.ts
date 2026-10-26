@@ -11,7 +11,7 @@ const fixture = (name: string): any =>
     ),
   );
 
-for (const name of ["available", "zip-only", "no-artifacts", "withdrawn"]) {
+for (const name of ["available", "alpha-candidate", "zip-only", "no-artifacts", "withdrawn"]) {
   test(`accept ${name} and preserve release metadata`, () => {
     const input = fixture(name);
     const result = validateMetadata(input);

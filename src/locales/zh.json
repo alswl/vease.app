@@ -62,5 +62,12 @@
   "release-size": "文件大小",
   "release-bytes": "字节",
   "release-retry": "重试",
-  "release-coming-soon": "DMG 下载链接即将提供"
+  "release-coming-soon": "下载准备中",
+  "platform-coming-soon": "敬请期待",
+  "invite-title": "邀请内测说明",
+  "invite-login": "安装后连接 Vease 网关，用邮箱验证码登录，并使用邀请方提供的邀请码激活。",
+  "invite-credits": "制作前请在 App 查看报价。Credits 通过内测邀请方发放或兑换，当前不提供在线购买；首次 AI 制作请求扣费，同一次已付制作继续或重试不重复收取制作费。",
+  "invite-help": "需要邀请码或使用帮助，请联系向你提供内测邀请的邀请人，或在领取邀请码的内测群联系负责人。请勿发送验证码、邀请码或原片。",
+  "invite-retention": "原片保留在 Mac；云端 AI 分析会上传关键帧，服务端会留存关键帧及必要的请求和扣费记录。需要处理留存数据时，请通过内测邀请渠道联系负责人；这里不承诺自动删除期限。",
+  "invite-compensation": "取消、失败、超时或断线不会自动退款。遇到异常扣费，请通过内测邀请渠道反馈，由负责人核查并人工处理补偿。"
 }
