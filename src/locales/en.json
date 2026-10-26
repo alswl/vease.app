@@ -41,7 +41,7 @@
   "feature4-title": "Ask for the change you want",
   "feature4-desc": "“Shorten this section to 10 seconds.” Tell AI what you want without finding the cut points yourself. Preview the result and undo it if you prefer the original.",
   "download-title": "Turn your footage into a vlog worth sharing",
-  "download-desc": "Remember vease.app. Start with a folder of footage and let Vease make the first cut. An invitation code is required to use the beta app.",
+  "download-desc": "Remember vease.app. Start with a folder of footage and let Vease make the first cut.",
   "footer-copy": "© 2026 Vease · AI helps with the cut. You tell the story. · Private beta",
   "language-switch": "切换到中文",
   "language-name": "中文",
@@ -63,11 +63,5 @@
   "release-bytes": "bytes",
   "release-retry": "Retry",
   "release-coming-soon": "Download preparation in progress",
-  "platform-coming-soon": "Coming soon",
-  "invite-title": "Invitation-only beta",
-  "invite-login": "Connect the installed app to the Vease gateway, sign in with an email code, then activate with the code supplied by your inviter.",
-  "invite-credits": "Check the quote in the app before starting. Credits are granted or redeemed through the beta invitation channel; online purchases are not available. The first approved AI request pays for the run; continuing or retrying the same paid run does not charge another production fee.",
-  "invite-help": "For an invitation or help, contact your inviter or the owner in the beta group where you received your invitation. Do not share login codes, invitation codes, or original footage.",
-  "invite-retention": "Original footage stays on your Mac. Cloud analysis uploads key frames; the service retains those frames and necessary request and billing records. Contact the owner through your beta invitation channel for data-retention requests. No automatic deletion deadline is promised here.",
-  "invite-compensation": "Cancellation, failure, timeout, or disconnection does not trigger an automatic refund. Report unexpected charges through your beta invitation channel so the owner can investigate and handle compensation manually."
+  "platform-coming-soon": "Coming soon"
 }

@@ -11,20 +11,6 @@ function humanSize(bytes: number, language: string): string {
   return `${(bytes / 1024 / 1024).toLocaleString(language === "en" ? "en-US" : "zh-CN", { maximumFractionDigits: 1 })} MB`;
 }
 
-function InvitationNotes() {
-  const { t } = useTranslation();
-  return (
-    <div className="release-card" data-testid="invitation-notes">
-      <h3>{t("invite-title")}</h3>
-      <p>{t("invite-login")}</p>
-      <p>{t("invite-credits")}</p>
-      <p>{t("invite-help")}</p>
-      <p>{t("invite-retention")}</p>
-      <p>{t("invite-compensation")}</p>
-    </div>
-  );
-}
-
 function UpcomingPlatforms() {
   const { t } = useTranslation();
   return (
@@ -192,7 +178,6 @@ export function ReleaseDownloadSection() {
           </div>
           <UpcomingPlatforms />
         </div>
-        <InvitationNotes />
       </div>
     </section>
   );
@@ -212,7 +197,6 @@ export function DownloadSection() {
           </div>
           <UpcomingPlatforms />
         </div>
-        <InvitationNotes />
       </div>
     </section>
   );
