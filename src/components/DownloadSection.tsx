@@ -193,7 +193,13 @@ export function DownloadSection() {
         <div className="download-platforms">
           <div className="release-card platform-card">
             <h3>macOS Apple Silicon</h3>
-            <p className="release-status">{t("release-coming-soon")}</p>
+            <a
+              className="btn"
+              href="https://dl-vease.dijingchao.com/releases/0.1.1-alpha.5/Vease-0.1.1-alpha.5-darwin-arm64.dmg"
+              onClick={() => trackDownload("dmg", "0.1.1-alpha.5")}
+            >
+              {t("release-download", { format: "DMG" })}
+            </a>
           </div>
           <UpcomingPlatforms />
         </div>
