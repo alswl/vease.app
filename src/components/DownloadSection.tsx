@@ -7,7 +7,7 @@ import {
 import { trackDownload } from "../lib/analytics";
 import { useTranslation } from "react-i18next";
 
-const currentDownloadVersion = "0.1.1-alpha.5";
+const currentDownloadVersion = "0.1.1-alpha.6";
 
 function humanSize(bytes: number, language: string): string {
   return `${(bytes / 1024 / 1024).toLocaleString(language === "en" ? "en-US" : "zh-CN", { maximumFractionDigits: 1 })} MB`;
