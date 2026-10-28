@@ -7,6 +7,8 @@ import {
 import { trackDownload } from "../lib/analytics";
 import { useTranslation } from "react-i18next";
 
+const currentDownloadVersion = "0.1.1-alpha.5";
+
 function humanSize(bytes: number, language: string): string {
   return `${(bytes / 1024 / 1024).toLocaleString(language === "en" ? "en-US" : "zh-CN", { maximumFractionDigits: 1 })} MB`;
 }
@@ -193,10 +195,13 @@ export function DownloadSection() {
         <div className="download-platforms">
           <div className="release-card platform-card">
             <h3>macOS Apple Silicon</h3>
+            <p className="release-meta">
+              {t("release-version", { version: currentDownloadVersion })}
+            </p>
             <a
               className="btn"
-              href="https://dl-vease.dijingchao.com/releases/0.1.1-alpha.5/Vease-0.1.1-alpha.5-darwin-arm64.dmg"
-              onClick={() => trackDownload("dmg", "0.1.1-alpha.5")}
+              href={`https://dl-vease.dijingchao.com/releases/${currentDownloadVersion}/Vease-${currentDownloadVersion}-darwin-arm64.dmg`}
+              onClick={() => trackDownload("dmg", currentDownloadVersion)}
             >
               {t("release-download", { format: "DMG" })}
             </a>
