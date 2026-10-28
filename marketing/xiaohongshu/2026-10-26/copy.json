@@ -1,0 +1,6 @@
+[
+  {"name":"01-airy-travel","color":"#15152b","headline":["旅行的故事，","让 AI 帮你剪。"],"subtitle":"挑镜头 · 排故事 · 预览后再导出"},
+  {"name":"02-travel-journal","color":"#38352f","headline":["拍了好多，","终于剪成 vlog。"],"subtitle":"把零散的片段，串成你的故事"},
+  {"name":"03-neon-cinema","color":"#f7f5ff","headline":["AI 帮你剪，","故事由你定。"],"subtitle":"先看一版，再说出你想改的地方"},
+  {"name":"04-weekend-editorial","color":"#293b32","headline":["周末拍的，","别只留在相册。"],"subtitle":"从一个素材文件夹，开始你的 vlog"}
+]

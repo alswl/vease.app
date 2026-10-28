@@ -1,0 +1,31 @@
+[
+  {
+    "name": "01-product-cover",
+    "eyebrow": "AI 辅助 vlog 剪辑",
+    "headline": [
+      "素材拍了很多，",
+      "还差一支 vlog。"
+    ],
+    "subtitle": "AI 帮你挑镜头、排故事，每一步由你确认。"
+  },
+  {
+    "name": "02-footage-library",
+    "eyebrow": "镜头整理",
+    "headline": [
+      "拍了什么，",
+      "一眼就看清。"
+    ],
+    "subtitle": "镜头描述、评分、筛选，都在素材库里。",
+    "note": "不用再靠文件名猜内容。"
+  },
+  {
+    "name": "03-feedback",
+    "eyebrow": "逐段反馈",
+    "headline": [
+      "想怎么改，",
+      "直接说。"
+    ],
+    "subtitle": "在哪段写下反馈，就在哪段调整。",
+    "note": "开头留一点环境声，节奏再慢一些。"
+  }
+]
