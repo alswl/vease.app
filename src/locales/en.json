@@ -12,7 +12,7 @@
   "step1-title": "Import footage",
   "step1-desc": "Put the footage you want to edit into one folder and import it. The app organizes shots while leaving your originals untouched.",
   "step2-title": "Find the shots you want",
-  "step2-desc": "Skip opening every video to remember what you filmed. AI describes and tags shots and turns speech into searchable text, so you can find the moments you want.",
+  "step2-desc": "AI adds descriptions and tags so you can find the clips you want. Optional speech recognition turns dialogue into text.",
   "step3-title": "Shape your story",
   "step3-desc": "A quick recap or a story with more detail? Choose your target length, see which shots go where, and adjust the outline before the cut begins.",
   "step4-title": "Choose your favorite cut",
@@ -63,5 +63,6 @@
   "release-bytes": "bytes",
   "release-retry": "Retry",
   "release-coming-soon": "Download preparation in progress",
-  "platform-coming-soon": "Coming soon"
+  "platform-coming-soon": "Coming soon",
+  "install-hint": "Open the DMG and drag Vease to Applications to install."
 }

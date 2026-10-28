@@ -270,3 +270,5 @@
     .foot { align-items: flex-start; gap: 16px; }
     .foot p { flex-basis: 100%; order: 3; }
   }
+
+  .final .installation-hint { margin-top: 20px; font-size: 14px; }

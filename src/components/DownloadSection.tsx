@@ -178,6 +178,7 @@ export function ReleaseDownloadSection() {
           </div>
           <UpcomingPlatforms />
         </div>
+        <p className="installation-hint">{t("install-hint")}</p>
       </div>
     </section>
   );
@@ -197,6 +198,7 @@ export function DownloadSection() {
           </div>
           <UpcomingPlatforms />
         </div>
+        <p className="installation-hint">{t("install-hint")}</p>
       </div>
     </section>
   );
